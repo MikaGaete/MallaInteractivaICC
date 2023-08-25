@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
@@ -12,10 +13,11 @@ export default {
       "Esp": "#A0C4FF",
       "ElecLic": "#C1FBA4",
       "ElecEsp": "#7BF1A8",
-      "FI": "#FFADAD",
+      "FG": "#FFADAD",
       "IN": "#FDFFB6",
       "TI": "#FFD6E0",
-      "PF": "#FFEF9F"
+      "PF": "#FFEF9F",
+      "AP": "#9BC53D"
     }
   },
   plugins: [],

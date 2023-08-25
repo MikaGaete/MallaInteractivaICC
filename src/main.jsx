@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import {Malla} from "./Malla.jsx";
+import {Malla} from "./Pages/Malla.jsx";
 import {Provider} from "react-redux";
 import {store} from "./store/store.js";
 

@@ -1,6 +1,6 @@
 import {useDispatch} from "react-redux";
-import data from './data.json';
-import {updateCommonPlan, updateDegree, updateSpecialty} from "./store/slices/dataSlice.js";
+import data from '../Data/data.json';
+import {updateCommonPlan, updateDegree, updateSpecialty} from "../store/slices/dataSlice.js";
 import {useEffect} from "react";
 
 export const FirstTimeSetUp = () => {
@@ -15,7 +15,7 @@ export const FirstTimeSetUp = () => {
             else if (data[semesters[i]][0][3] === 'Lic') {
                 dispatch(updateDegree(data[semesters[i]]));
             }
-            else if (data[semesters[i]][0][3] === 'Esp') {
+            else if (data[semesters[i]][0][3] === 'Esp' || data[semesters[i]][0][3] === 'ElecEsp') {
                 dispatch(updateSpecialty(data[semesters[i]]));
             }
         }
