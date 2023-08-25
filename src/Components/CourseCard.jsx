@@ -1,6 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
-import {updateApprovedCourses} from "../store/slices/dataSlice.js";
+import {UpdateApprovedCourse} from "../store/slices/thunks.js";
 
 // eslint-disable-next-line react/prop-types
 export const CourseCard = ({details}) => {
@@ -12,16 +12,15 @@ export const CourseCard = ({details}) => {
     const handleClick = (event) => {
         if (!unlocked) return;
         event.preventDefault();
-        dispatch(updateApprovedCourses({code: details[1], credits: details[2]}));
+        dispatch(UpdateApprovedCourse({code: details[1], credits: details[2]}));
         setApproved(!approved);
     }
 
     const checkUnlocked = (approvedCourses, preRequisites) => preRequisites.every(v => approvedCourses.includes(v));
 
     useEffect(() => {
-        if (checkUnlocked(ApprovedCourses, details[4])) {
-            setUnlocked(true);
-        }
+        if (ApprovedCourses.includes(details[1])) setApproved(true);
+        if (checkUnlocked(ApprovedCourses, details[4])) setUnlocked(true);
         else setUnlocked(false);
     }, [ApprovedCourses]);
 

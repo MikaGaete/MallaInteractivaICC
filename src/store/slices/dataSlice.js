@@ -6,8 +6,8 @@ export const dataSlice = createSlice({
         CommonPlan: [],
         Degree: [],
         Specialty: [],
-        ApprovedCourses: [],
-        ApprovedCredits: 0
+        ApprovedCourses: JSON.parse(localStorage.getItem('MI-ICC-AP')) || [],
+        ApprovedCredits: JSON.parse(localStorage.getItem('MI-ICC-AC')) || 0
     },
     reducers: {
         updateApprovedCourses: (state, action) => {
@@ -34,8 +34,15 @@ export const dataSlice = createSlice({
         },
         updateSpecialty: (state, action) => {
             state.Specialty = [...state.Specialty, action.payload];
+        },
+        updateLocalSave: (state, action) => {
+            localStorage.removeItem('MI-ICC-AP');
+            localStorage.removeItem('MI-ICC-AC');
+            console.log('aaaaaaaaaaaa')
+            localStorage.setItem('MI-ICC-AP', JSON.stringify(state.ApprovedCourses));
+            localStorage.setItem('MI-ICC-AC', JSON.stringify(state.ApprovedCredits));
         }
     }
 })
 
-export const {updateApprovedCourses, updateCommonPlan, updateDegree, updateSpecialty} = dataSlice.actions;
+export const {updateApprovedCourses, updateCommonPlan, updateDegree, updateLocalSave, updateSpecialty} = dataSlice.actions;
