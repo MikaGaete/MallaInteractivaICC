@@ -10,7 +10,6 @@ export const CourseCard = ({details}) => {
     const [approved, setApproved] = useState(false);
 
     const handleClick = (event) => {
-        if (!unlocked) return;
         event.preventDefault();
         dispatch(UpdateApprovedCourse({code: details[1], credits: details[2]}));
         setApproved(!approved);
