@@ -1,0 +1,84 @@
+{
+  "s1": [
+    ["Introducción al Cálculo", "MA1001", 6, "PC", [], "A"],
+    ["Introducción al Álgebra", "MA1101", 6, "PC", [], "A"],
+    ["Introducción a la Física Clásica", "FI1000", 6, "PC", [], "A"],
+    ["Herramientas Computacionales para la Ingeniería y Ciencias", "CC1000", 3, "PC", [], "A"],
+    ["Desafíos de Innovación en Ingeniería y Ciencias", "CD1100", 6, "PC", [], "A"],
+    ["Aplicaciones de la Biologia a la Ingeniería y Ciencias", "BT1211", 6, "PC", [], "A"]
+  ],
+  "s2": [
+    ["Cálculo Diferencial e Integral", "MA1002", 6, "PC", ["MA1001"], "A"],
+    ["Álgebra Lineal", "MA1102", 6, "PC", ["MA1101"], "A"],
+    ["Introducción a la Física Moderna", "FI1100", 6, "PC", ["FI1000", "MA1001", "MA1101"], "A"],
+    ["Introducción a la Programación", "CC1002", 6, "PC", [], "A"],
+    ["Proyecto de Innovación en Ingeniería y Ciencias", "CD1201", 3, "PC", ["CD1100"], "A"],
+    ["Formación General, Humanistas, Idiomas y Deportes", "EH/EI/FG/DR/FT", 3, "FI", [], "A"]
+  ],
+  "s3": [
+    ["Cálculo en Varias Variables", "MA2001", 6, "PC", ["MA1002", "MA1102"], "A"],
+    ["Ecuaciones Diferenciales Ordinarias", "MA2601", 6, "PC", ["MA1002", "MA1102"], "A"],
+    ["Métodos Experimentales", "FI2003", 6, "PC", ["FI1100", "MA1002"], "A"],
+    ["Mecánica", "FI2001", 6, "PC", ["FI1100", "MA1102", "MA1002"], "A"],
+    ["Química", "IQ2211", 6, "PC", [], "A"]
+  ],
+  "s4": [
+    ["Cálculo Avanzado y Aplicaciones", "MA2002", 6, "PC", ["MA2001", "MA2601"], "A"],
+    ["Economía", "IN2201", 6, "PC", ["MA2001"], "A"],
+    ["Electromagnetismo", "FI2002", 6, "PC", ["MA2001", "MA2601", "FI2003"], "A"],
+    ["Termodinámica", "FI2004/IQ2212", 6, "PC", ["IQ2211", "FI2001", "MA2001"], "A"],
+    ["Módulo Interdiciplinario", "CD2201", 3, "PC", ["CD1201"], "A"],
+    ["Formación General, Humanistas, Idiomas y Deportes", "EH/EI/FG/DR/FT", 3, "FI", [], "A"]
+  ],
+  "s5": [
+    ["Algoritmos y Estructuras de Datos", "CC3001", 6, "Lic", ["CC1002"], "A"],
+    ["Matemáticas Discretas para la Computación", "CC3101", 6, "Lic", ["MA1101", "CC1002"], "A"],
+    ["Modelación y Computación Gráfica para Ingenierios", "CC3501", 6, "Lic", ["MA2001", "MA2601", "CC1002", "FI2001"], "A"],
+    ["Probabilidades y Estadísticas", "MA3403", 6, "Lic", ["MA2001"], "A"],
+    ["Formación General, Humanistas, Idiomas y Deportes", "EH/EI/FG/DR/FT", 3, "FI", [], "A"],
+    ["Formación General, Humanistas, Idiomas y Deportes", "EH/EI/FG/DR/FT", 3, "FI", [], "A"]
+  ],
+  "s6": [
+    ["Metodologías de Diseño y Programación", "CC3002", 6, "Lic", ["CC3001"], "A"],
+    ["Teoría de la Computación", "CC3102", 6, "Lic", ["CC3101"], "A"],
+    ["Bases de Datos", "CC3201", 6, "Lic", ["CC3001"], "A"],
+    ["Programación de Software y Sistemas", "CC3301", 6, "Lic", ["CC3001"], "A"],
+    ["Electivo de Licenciatura", "", 6, "ElecLic", [], "A"]
+  ],
+  "s7": [
+    ["Diseño y Análisis de Algoritmos", "CC4102", 6, "Lic", ["MA3403", "CC3001", "CC3102"], "A"],
+    ["Sistemas Operativos", "CC4302", 6, "Lic", ["CC3301"], "A"],
+    ["Ingeniería de Software", "CC4401", 6, "Lic", ["CC3002", "CC3201"], "A"],
+    ["Minería de Datos", "CC5205", 6, "Lic", ["CC3001"], "A"],
+    ["Electivo de Licenciatura", "", 6, "ElecLic", [], "A"],
+    ["Práctica Profesional I", "CC4901", 7, "PF", ["CC3002", "CC3201", "CC3301"], "A"]
+  ],
+  "s8": [
+    ["Lenguajes de Programación", "CC4102", 6, "Lic", ["CC3102"], "A"],
+    ["Redes", "CC4303", 6, "Lic", ["CC4302"], "A"],
+    ["Formulación, Evaluación y Gestión de Proyectos", "CC4402", 6, "Lic", ["CC4401", "IN2201", "CD2201"], "A"],
+    ["Examen de Suficiencia de Inglés I", "EI1090", 6, "IN", [], "A"],
+    ["Electivo de Licenciatura", "", 6, "ElecLic", [], "A"],
+    ["Electivo de Licenciatura", "", 6, "ElecLic", [], "A"]
+  ],
+  "s9": [
+    ["Núcleo Gestión para Ingenieros", "CC5601/CC5602", 6, "Esp", [], "A"],
+    ["Electivo de Especialidad", "", 6, "ElecEsp", [], "A"],
+    ["Electivo de Especialidad", "", 6, "ElecEsp", [], "A"],
+    ["Electivo de Especialidad", "", 6, "ElecEsp", [], "A"],
+    ["Formación Integral de Especialidad", "", 3, "FI", [], "A"],
+    ["Formación Integral de Especialidad", "", 3, "FI", [], "A"],
+    ["Práctica Profesional II", "CC4901", 7, "PF", ["CC4901", "CC4401", "CC4101"], "A"]
+  ],
+  "s10": [
+    ["Proyecto de Software", "CC5402", 12, "Esp", ["CC5205", "CC4402"], "A"],
+    ["Introducción al Trabajo de Título", "CC6907", 6, "TI", ["CC4402"], "A"],
+    ["Electivo de Especialidad", "", 6, "ElecEsp", [], "A"],
+    ["Electivo de Especialidad", "", 6, "ElecEsp", [], "A"]
+  ],
+  "s11": [
+    ["Electivo de Especialidad", "", 6, "Esp", [], "A"],
+    ["Trabajo de Título", "CC6919", 24, "TI", ["CC6907"], "A"],
+    ["Examen de Suficiencia de Inglés I", "EI2090", 6, "IN", [], "A"]
+  ]
+}
