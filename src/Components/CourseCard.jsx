@@ -24,7 +24,7 @@ export const CourseCard = ({details}) => {
     }, [ApprovedCourses]);
 
     return (
-        <div onClick={handleClick} className={`w-full h-28 flex flex-col justify-around text-sm text-center gap-0.5 px-1 opacity-80 ${unlocked ? 'hover:cursor-pointer brightness-100' : 'hover:cursor-default brightness-50' }  ${details[3] === 'PC' && !approved ? `bg-PC` : null} ${details[3] === 'ElecEsp' && !approved ? `bg-ElecEsp` : null} ${details[3] === 'Esp' && !approved ? `bg-Esp` : null} ${details[3] === 'ElecLic' && !approved ? `bg-ElecLic` : null} ${details[3] === 'Lic' && !approved ? `bg-Lic` : null} ${details[3] === 'FG' && !approved ? `bg-FG` : null} ${details[3] === 'IN' && !approved ? `bg-IN` : null} ${details[3] === 'TI' && !approved ? `bg-TI` : null} ${details[3] === 'PF' && !approved ? `bg-PF` : null} ${approved ? `bg-AP` : null} `} >
+        <div onClick={handleClick} className={`w-full h-28 flex flex-col justify-around text-md font-semibold text-center gap-0.5 px-1 ${unlocked ? 'hover:cursor-pointer brightness-100' : 'hover:cursor-default brightness-50' }  ${details[3] === 'PC' && !approved ? `bg-PC` : null} ${details[3] === 'ElecEsp' && !approved ? `bg-ElecEsp` : null} ${details[3] === 'Esp' && !approved ? `bg-Esp` : null} ${details[3] === 'ElecLic' && !approved ? `bg-ElecLic` : null} ${details[3] === 'Lic' && !approved ? `bg-Lic` : null} ${details[3] === 'FG' && !approved ? `bg-FG` : null} ${details[3] === 'IN' && !approved ? `bg-IN` : null} ${details[3] === 'TI' && !approved ? `bg-TI` : null} ${details[3] === 'PF' && !approved ? `bg-PF` : null} ${approved ? `bg-AP` : null} `} >
             <div>{details[1]}</div>
             <div className={'line-clamp-2'}>{details[0]}</div>
             <div>{details[2]} creditos</div>

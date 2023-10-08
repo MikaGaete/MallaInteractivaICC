@@ -1,0 +1,42 @@
+{
+  "AP": {
+    "color": "#9BC53D",
+    "full": "Curso Aprobado"
+  },
+  "Lic": {
+    "color": "9261cf",
+    "full": "Curso Licenciatura"
+  },
+  "PC": {
+    "color": "#A4F4F2",
+    "full": "Curso Plan Común"
+  },
+  "TI": {
+    "color": "#FFD6E0",
+    "full": "Curso Titulación"
+  },
+  "Esp": {
+    "color": "#7BD1C4",
+    "full": "Curso Especialidad"
+  },
+  "ElecEsp": {
+    "color": "#7BF1A8",
+    "full": "Electivo Especialidad"
+  },
+  "ElecLic": {
+    "color": "#C1FBA4",
+    "full": "Electivo Licenciatura"
+  },
+  "IN": {
+    "color": "#FDFFB6",
+    "full": "Examen Inglés"
+  },
+  "FG": {
+    "color": "#FFADAD",
+    "full": "Formación General"
+  },
+  "PF": {
+    "color": "#FFEF9F",
+    "full": "Práctica Profesional"
+  }
+}

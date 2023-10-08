@@ -1,42 +1,42 @@
 {
-  "PC": {
-    "color": "#A4F4F2",
-    "full": "Curso Plan Común"
+  "AP": {
+    "color": "#9BC53D",
+    "full": "Curso Aprobado"
   },
   "Lic": {
     "color": "#A0C4FF",
     "full": "Curso Licenciatura"
   },
-  "Esp": {
-    "color": "#A0C4FF",
-    "full": "Curso Especialidad"
-  },
-  "ElecLic": {
-    "color": "#C1FBA4",
-    "full": "Electivo Licenciatura"
-  },
-  "ElecEsp": {
-    "color": "#7BF1A8",
-    "full": "Electivo Especialidad"
-  },
-  "FG": {
-    "color": "#FFADAD",
-    "full": "Formación General"
-  },
-  "IN": {
-    "color": "#FDFFB6",
-    "full": "Examen Inglés"
+  "PC": {
+    "color": "#A4F4F2",
+    "full": "Curso Plan Común"
   },
   "TI": {
     "color": "#FFD6E0",
     "full": "Curso Titulación"
   },
-  "PF": {
+  "Esp": {
+    "color": "#A0C4FF",
+    "full": "Curso Especialidad"
+  },
+  "ElecEsp": {
+    "color": "#7BF1A8",
+    "full": "Electivo Especialidad"
+  },
+  "ElecLic": {
+    "color": "#C1FBA4",
+    "full": "Electivo Licenciatura"
+  },
+  "IN": {
+    "color": "#FDFFB6",
+    "full": "Examen Inglés"
+  },
+  "FG": {
+    "color": "#FFADAD",
+    "full": "Formación General"
+  },
+  "PFICC": {
     "color": "#FFEF9F",
     "full": "Práctica Profesional"
-  },
-  "AP": {
-    "color": "#9BC53D",
-    "full": "Curso Aprobado"
   }
 }

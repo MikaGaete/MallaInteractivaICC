@@ -1,4 +1,6 @@
 import {createSlice} from "@reduxjs/toolkit";
+import {ColorDataICC, ColorDataICQ, DataICC, DataICQ} from "../../Data/DataExport.jsx";
+
 
 export const dataSlice = createSlice({
     name: 'data',
@@ -6,8 +8,12 @@ export const dataSlice = createSlice({
         CommonPlan: [],
         Degree: [],
         Specialty: [],
-        ApprovedCourses: JSON.parse(localStorage.getItem('MI-ICC-AP')) || [],
-        ApprovedCredits: JSON.parse(localStorage.getItem('MI-ICC-AC')) || 0
+        PreRequisites: [],
+        Specialties: {ICC: DataICC, ICQ: DataICQ},
+        Colors: {ICC: ColorDataICC, ICQ: ColorDataICQ},
+        Titles: {ICC: 'Ingeniería Civil en Computación', ICQ: 'Ingeniería Civil Química'},
+        ApprovedCourses: JSON.parse(localStorage.getItem('MI-MallaUniversal-AP')) || [],
+        ApprovedCredits: JSON.parse(localStorage.getItem('MI-MallaUniversal-AC')) || 0
     },
     reducers: {
         updateApprovedCourses: (state, action) => {
@@ -36,13 +42,17 @@ export const dataSlice = createSlice({
             state.Specialty = [...state.Specialty, action.payload];
         },
         updateLocalSave: (state, action) => {
-            localStorage.removeItem('MI-ICC-AP');
-            localStorage.removeItem('MI-ICC-AC');
-            console.log('aaaaaaaaaaaa')
-            localStorage.setItem('MI-ICC-AP', JSON.stringify(state.ApprovedCourses));
-            localStorage.setItem('MI-ICC-AC', JSON.stringify(state.ApprovedCredits));
+            localStorage.removeItem('MI-MallaUniversal-AP');
+            localStorage.removeItem('MI-MallaUniversal-AC');
+            localStorage.setItem('MI-MallaUniversal-AP', JSON.stringify(state.ApprovedCourses));
+            localStorage.setItem('MI-MallaUniversal-AC', JSON.stringify(state.ApprovedCredits));
+        },
+        reset: (state, action) => {
+            state.CommonPlan = [];
+            state.Degree = [];
+            state.Specialty = [];
         }
     }
 })
 
-export const {updateApprovedCourses, updateCommonPlan, updateDegree, updateLocalSave, updateSpecialty} = dataSlice.actions;
+export const {updateApprovedCourses, updateCommonPlan, updateDegree, updateLocalSave, updateSpecialty, reset} = dataSlice.actions;
