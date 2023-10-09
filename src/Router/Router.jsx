@@ -5,11 +5,11 @@ import {NextUIProvider} from "@nextui-org/react";
 
 export const Router = () => {
     return (
-        <BrowserRouter basename={'/malla'}>
+        <BrowserRouter>
             <NextUIProvider>
                 <Routes>
-                    <Route path={''} element={<CareerSelection/>}/>
-                    <Route path={':specialty'} element={<MallaUniversal/>}/>
+                    <Route path={'/'} element={<CareerSelection/>}/>
+                    <Route path={'/:specialty'} element={<MallaUniversal/>}/>
                 </Routes>
             </NextUIProvider>
         </BrowserRouter>
