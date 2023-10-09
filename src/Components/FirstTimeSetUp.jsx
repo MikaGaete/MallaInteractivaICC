@@ -4,7 +4,7 @@ import {useEffect} from "react";
 
 export const FirstTimeSetUp = (specialty) => {
     const {Specialties} = useSelector(state => state.data);
-    const semesters = Object.keys(Specialties[specialty.slice(1)]);
+    const semesters = Object.keys(Specialties[specialty]);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -12,13 +12,13 @@ export const FirstTimeSetUp = (specialty) => {
 
         for (let i = 0; i < semesters.length; i++) {
             if (i < 4) {
-                dispatch(updateCommonPlan(Specialties[specialty.slice(1)][semesters[i]]));
+                dispatch(updateCommonPlan(Specialties[specialty][semesters[i]]));
             }
             else if (i >= 4 && i < 8) {
-                dispatch(updateDegree(Specialties[specialty.slice(1)][semesters[i]]));
+                dispatch(updateDegree(Specialties[specialty][semesters[i]]));
             }
             else if (i >= 8 && i < 11) {
-                dispatch(updateSpecialty(Specialties[specialty.slice(1)][semesters[i]]));
+                dispatch(updateSpecialty(Specialties[specialty][semesters[i]]));
             }
         }
     }, []);

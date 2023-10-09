@@ -10,12 +10,12 @@ export const MallaUniversal = () => {
 
     FirstTimeSetUp(specialty);
     const {CommonPlan, Degree, Specialty, ApprovedCredits, Colors, Titles} = useSelector(state => state.data);
-    const types = Object.keys(Colors[specialty.slice(1)]);
+    const types = Object.keys(Colors[specialty]);
 
     return (
         <div className={'w-full min-h-full'}>
             <div className={'flex flex-col items-center m-4 md:m-8 gap-8'}>
-                <h1 className={'text-center text-3xl font-semibold'}>Malla {Titles[specialty.slice(1)]}</h1>
+                <h1 className={'text-center text-3xl font-semibold'}>Malla {Titles[specialty]}</h1>
                 <div className={'flex gap-6 w-full overflow-x-auto py-4'}>
                     <div className={'min-w-[651px]'}>
                         <h2 className={'text-center bg-[#BAD7F2] py-3 mb-4 font-bold text-lg'}>Plan Común</h2>
@@ -26,7 +26,7 @@ export const MallaUniversal = () => {
                                     <div key={index}>
                                         <h3 className={'text-center text-lg font-semibold mb-2'}>{idx}</h3>
                                         <div className={'flex flex-col gap-1'}>
-                                            {semester.map((course, index) => <CourseCard specialty={specialty.slice(1)} key={idx+"|"+index} details={course} />)}
+                                            {semester.map((course, index) => <CourseCard specialty={specialty} key={idx+"|"+index} details={course} />)}
                                         </div>
                                     </div>
                                 )
@@ -42,7 +42,7 @@ export const MallaUniversal = () => {
                                     <div key={index}>
                                         <h3 className={'text-center text-lg font-semibold mb-2'}>{idx}</h3>
                                         <div className={'flex flex-col gap-1'}>
-                                            {semester.map((course, index) => <CourseCard specialty={specialty.slice(1)} key={idx+"|"+index} details={course} />)}
+                                            {semester.map((course, index) => <CourseCard specialty={specialty} key={idx+"|"+index} details={course} />)}
                                         </div>
                                     </div>
                                 )
@@ -58,7 +58,7 @@ export const MallaUniversal = () => {
                                     <div key={index}>
                                         <h3 className={'text-center text-lg font-semibold mb-2'}>{idx}</h3>
                                         <div className={'flex flex-col gap-1'}>
-                                            {semester.map((course, index) => <CourseCard specialty={specialty.slice(1)} key={idx+"|"+index} details={course} />)}
+                                            {semester.map((course, index) => <CourseCard specialty={specialty} key={idx+"|"+index} details={course} />)}
                                         </div>
                                     </div>
                                 )
@@ -67,9 +67,9 @@ export const MallaUniversal = () => {
                     </div>
                 </div>
                 <div className={'flex flex-col items-center w-full gap-8 font-semibold'}>
-                    <p className={'text-xl lg:text-2xl'}>Creditos aprobados: {ApprovedCredits[specialty.slice(1)]}</p>
+                    <p className={'text-xl lg:text-2xl'}>Creditos aprobados: {ApprovedCredits[specialty]}</p>
                     <div className={'w-full grid grid-cols-2 md:grid-cols-5 gap-2 justify-items-center'}>
-                        {types.map((type) => <ColorCard key={type} type={type} specialty={specialty.slice(1)} {...Colors[specialty.slice(1)][type]}/>)}
+                        {types.map((type) => <ColorCard key={type} type={type} specialty={specialty} {...Colors[specialty][type]}/>)}
                     </div>
                 </div>
             </div>

@@ -56,7 +56,6 @@ export const dataSlice = createSlice({
             state.PreRequisites = action.payload;
         },
         deletePreRequisites: (state, action) => {
-            console.log('wa')
             state.PreRequisites = [];
         }
     }
