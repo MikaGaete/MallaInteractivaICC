@@ -13,7 +13,7 @@
         ["Introducción a la Programación","CC1002",6,"PC",[],"A"],
         ["Introducción a la Física Moderna","FI1100",6,"PC",["FI1000","MA1101","MA1001"],"A"],
         ["Proyecto de Innovación","CD1201",3,"PC",["CD1100"],"A"],
-        ["Formación Integral","FG01",2,"FG",[],"A"]
+        ["Formación Integral","FG01",3,"FG",[],"A"]
     ],
     "s3": [
         ["Cálculo en Varias Variables","MA2001",6,"PC",["MA1002","MA1102"],"A"],
@@ -28,7 +28,7 @@
         ["Electromagnetismo","FI2002",6,"PC",["MA2001","MA2601","FI2003"],"A"],
         ["Termodinámica","IQ2212",6,"PC",["IQ2211","FI2001","MA2001"],"A"],
         ["Módulo Interdisciplinario","CD2201",3,"PC",["CD1201"],"A"],
-        ["Formación Integral","FG11",2,"FG",[],"A"]
+        ["Formación Integral","FG11",3,"FG",[],"A"]
     ],
     "s5": [
         ["Probabilidades y Estadística","MA3403",6,"Lic",["MA2001"],"A"],
@@ -50,7 +50,7 @@
         ["Evaluación de Proyectos de Ingeniería","ME4262",6,"Lic",["IN2201"],"A"],
         ["Innovación en Ingeniería","IQ4712",3,"Lic",["IQ3711"],"A"],
         ["Electivo de Licenciatura","QEL010",6,"ElecLic",[],"A"],
-        ["Formación Integral","FG21",2,"FG",[],"A"],
+        ["Formación Integral","FG21",3,"FG",[],"A"],
         ["Práctica Profesional I","IQ4911",7,"PF",["IQ3311"],"A"]
     ],
     "s8": [
@@ -59,7 +59,7 @@
         ["Operaciones Mecánicas","IQ4316",6,"Lic",["IQ3312"],"A"],
         ["Taller de Diseño e Innovación en Proyectos","IQ4713",6,"Lic",["ME4262","IQ4712"],"A"],
         ["Electivo de Licenciatura","QUEL020",3,"ElecLic",[],"A"],
-        ["Formación Integral","FG31",2,"FG",[],"A"],
+        ["Formación Integral","FG31",3,"FG",[],"A"],
         ["Examen de Suficiencia en Inglés I","EI1090",0,"IN",[],"A"]
     ],
     "s9": [

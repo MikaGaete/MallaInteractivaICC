@@ -1,8 +1,9 @@
 import {updateApprovedCourses, updateLocalSave} from "./dataSlice.js";
 
 export const UpdateApprovedCourse = (data) => {
+    console.log(data)
     return async (dispatch) => {
         dispatch(updateApprovedCourses(data));
-        dispatch(updateLocalSave());
+        dispatch(updateLocalSave(data.specialty));
     }
 }

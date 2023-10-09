@@ -3,6 +3,7 @@ import {useSelector} from "react-redux";
 import {CourseCard} from "../Components/CourseCard.jsx";
 import {ColorCard} from "../Components/ColorCard.jsx";
 import {useParams} from "react-router-dom";
+import {useEffect} from "react";
 
 export const MallaUniversal = () => {
     const {specialty} = useParams();
@@ -25,7 +26,7 @@ export const MallaUniversal = () => {
                                     <div key={index}>
                                         <h3 className={'text-center text-lg font-semibold mb-2'}>{idx}</h3>
                                         <div className={'flex flex-col gap-1'}>
-                                            {semester.map((course, index) => <CourseCard key={idx+"|"+index} details={course} />)}
+                                            {semester.map((course, index) => <CourseCard specialty={specialty.slice(1)} key={idx+"|"+index} details={course} />)}
                                         </div>
                                     </div>
                                 )
@@ -41,7 +42,7 @@ export const MallaUniversal = () => {
                                     <div key={index}>
                                         <h3 className={'text-center text-lg font-semibold mb-2'}>{idx}</h3>
                                         <div className={'flex flex-col gap-1'}>
-                                            {semester.map((course, index) => <CourseCard key={idx+"|"+index} details={course} />)}
+                                            {semester.map((course, index) => <CourseCard specialty={specialty.slice(1)} key={idx+"|"+index} details={course} />)}
                                         </div>
                                     </div>
                                 )
@@ -57,7 +58,7 @@ export const MallaUniversal = () => {
                                     <div key={index}>
                                         <h3 className={'text-center text-lg font-semibold mb-2'}>{idx}</h3>
                                         <div className={'flex flex-col gap-1'}>
-                                            {semester.map((course, index) => <CourseCard specialty={specialty} key={idx+"|"+index} details={course} />)}
+                                            {semester.map((course, index) => <CourseCard specialty={specialty.slice(1)} key={idx+"|"+index} details={course} />)}
                                         </div>
                                     </div>
                                 )
@@ -66,9 +67,9 @@ export const MallaUniversal = () => {
                     </div>
                 </div>
                 <div className={'flex flex-col items-center w-full gap-8 font-semibold'}>
-                    <p className={'text-xl lg:text-2xl'}>Creditos aprobados: {ApprovedCredits}</p>
+                    <p className={'text-xl lg:text-2xl'}>Creditos aprobados: {ApprovedCredits[specialty.slice(1)]}</p>
                     <div className={'w-full grid grid-cols-2 md:grid-cols-5 gap-2 justify-items-center'}>
-                        {types.map((type) => <ColorCard key={type} type={type} specialty={specialty} {...Colors[specialty.slice(1)][type]}/>)}
+                        {types.map((type) => <ColorCard key={type} type={type} specialty={specialty.slice(1)} {...Colors[specialty.slice(1)][type]}/>)}
                     </div>
                 </div>
             </div>
